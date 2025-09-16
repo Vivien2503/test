@@ -1,3 +1,4 @@
+import sys
 def BMICalculator(weight, height):
    try:
       weight = float(weight)
@@ -36,5 +37,8 @@ test_cases = [
 ]
 
 if __name__=='__main__':
+   # Run test cases
    for case in test_cases:
       BMICalculator(*case)
+   if len(sys.argv) == 3:
+      BMICalculator(sys.argv[1], sys.argv[2])
