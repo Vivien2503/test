@@ -11,7 +11,6 @@ def AverageCalculator(numbers):
 # Test cases
 test_cases = [[3,4,5], [60,39,92], ['abc',10,20], [10,20,30,40], [100]]
 
-
 if __name__ == '__main__':
   # Run test cases
   for case in test_cases:
