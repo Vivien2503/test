@@ -75,12 +75,6 @@ def BMICalculator(unit, height, weight):
    try:
       weight = float(weight)
       height = float(height)
-      if unit.lower() not in ["metric", "imperial"]:
-         print("Your input is invalid!")
-         return
-      if weight <= 0 or height <= 0:
-         print("Your input is invalid!")
-         return
       if unit.lower() == "imperial":
          bmi = 703 * weight / (height ** 2)
       else:
