@@ -71,10 +71,16 @@ C:\INF1002\Lab1\AverageCalculator> python BMICalculator.py abc
 Your input is invalid!
 '''
 import sys 
-def BMICalculator(weight, height, unit):
+def BMICalculator(unit, height, weight):
    try:
       weight = float(weight)
       height = float(height)
+      if unit.lower() not in ["metric", "imperial"]:
+         print("Your input is invalid!")
+         return
+      if weight <= 0 or height <= 0:
+         print("Your input is invalid!")
+         return
       if unit.lower() == "imperial":
          bmi = 703 * weight / (height ** 2)
       else:
@@ -82,21 +88,21 @@ def BMICalculator(weight, height, unit):
       # categorize result
       if bmi <= 16:
          category = "Severe Thinness"
-      elif 16 < bmi < 17:
+      elif 16 < bmi <= 17:
          category = "Moderate Thinness"
-      elif 17 < bmi < 18.5:
+      elif 17 < bmi <= 18.5:
          category = "Mild Thinness"
-      elif 18.5 < bmi < 25:
+      elif 18.5 < bmi <= 25:
          category = "Normal"
-      elif 25 < bmi < 30:
+      elif 25 < bmi <= 30:
          category = "Overweight"
-      elif 30 < bmi < 35:
+      elif 30 < bmi <= 35:
          category = "Obese Class I"
-      elif 35 < bmi < 40:
+      elif 35 < bmi <= 40:
          category = "Obese Class II"
       else:
          category = "Obese Class III"
-      print(f"{bmi:.2f}\t{category}")
+      print(f"{bmi:.2f} {category}")
    except Exception:
       print("Your input is invalid!")
 

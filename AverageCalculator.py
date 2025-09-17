@@ -38,4 +38,4 @@ def AverageCalculator(numbers):
 
 if __name__ == '__main__':
   if len(sys.argv) > 1:
-    AverageCalculator(sys.argv[1:])
+    AverageCalculator(sys.argv[1:]) 
