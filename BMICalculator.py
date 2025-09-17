@@ -30,6 +30,6 @@ def BMICalculator(weight, height, unit):
 
 if __name__=='__main__':
    if len(sys.argv) == 4:
-      BMICalculator(sys.argv[2], sys.argv[3], sys.argv[1])
+      BMICalculator(sys.argv[1], sys.argv[2], sys.argv[3])
    else:
       print("Your input is invalid!")
