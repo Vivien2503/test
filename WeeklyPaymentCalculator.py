@@ -1,10 +1,8 @@
 import sys
 def WeeklyPaymentCalculator():
     if len(sys.argv) != 4:
-        print(f"{' '.join(sys.argv[1:])}")
         print("Your input is invalid!")
         return
-    print(f"{sys.argv[1]} {sys.argv[2]} {sys.argv[3]}")
     try:
         hours = float(sys.argv[1])
         normal_rate = float(sys.argv[2])
