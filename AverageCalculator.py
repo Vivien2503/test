@@ -28,17 +28,14 @@ Your input is invalid!
 '''
 import sys
 def AverageCalculator():
+
     try:
-        a = float(sys.argv[1])
-        b = float(sys.argv[2])
-        c = float(sys.argv[3])
-        avg = (a + b + c) / 3
-        print(f"Average:{avg:.2f}")
+        nums = [float(x) for x in sys.argv[1:]]
+        average = sum(nums) / len(nums)
+        print(f"Average:{average:.2f}")
     except Exception:
         print("Your input is invalid!")
 
 if __name__ == '__main__':
   if len(sys.argv) == 4:
     AverageCalculator()
-  else:
-    print("Your input is invalid!")
