@@ -71,7 +71,8 @@ C:\INF1002\Lab1\AverageCalculator> python BMICalculator.py abc
 Your input is invalid!
 '''
 import sys 
-def BMICalculator(unit, height, weight):
+def BMICalculator():
+   
    try:
       weight = float(weight)
       height = float(height)
@@ -102,6 +103,6 @@ def BMICalculator(unit, height, weight):
 
 if __name__=='__main__':
    if len(sys.argv) == 4:
-      BMICalculator(sys.argv[1], sys.argv[2], sys.argv[3])
+      BMICalculator()
    else:
       print("Your input is invalid!")

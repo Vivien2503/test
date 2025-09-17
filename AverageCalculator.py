@@ -27,7 +27,7 @@ C:\INF1002\Lab1\AverageCalculator>python AverageCalculator.py abc 10 20
 Your input is invalid!
 '''
 import sys
-def AverageCalculator(numbers):
+def AverageCalculator():
   # Accepts a list of numbers (as floats or strings)
   try:
     nums = [float(x) for x in numbers]
@@ -38,4 +38,4 @@ def AverageCalculator(numbers):
 
 if __name__ == '__main__':
   if len(sys.argv) > 1:
-    AverageCalculator(sys.argv[1:]) 
+    AverageCalculator() 
