@@ -103,7 +103,7 @@ def BMICalculator():
             category = "Obese Class II"
         else:
             category = "Obese Class III"
-        print(f"{bmi:.2f} {category}")
+        print(f"{bmi:.2f}\t{category}")
     except Exception:
         print("Your input is invalid!")
 
